@@ -1,0 +1,42 @@
+{
+  "name": "myriad-cucumber",
+  "description": "myriad task that executes tests through cucumber-js",
+  "keywords": [
+    "cucumber",
+    "cucumber-js",
+    "grid",
+    "parallel",
+    "scale"
+  ],
+  "version": "0.1.0",
+  "homepage": "http://github.com/simondean/myriad-cucumber",
+  "author": "Simon Dean <simon@simondean.org> (http://www.simondean.org)",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/simondean/myriad-cucumber.git"
+  },
+  "bugs": {
+    "url": "http://github.com/simondean/myriad-cucumber/issues"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "./lib/myriad-cucumber",
+  "engines": {
+    "node": ">=0.6"
+  },
+  "dependencies": {
+    "cucumber": "~0.3.0"
+  },
+  "devDependencies": {},
+  "bin": {
+    "myriad-cucumber": "./bin/myriad-cucumber"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/simondean/myriad-cucumber/LICENSE"
+    }
+  ]
+}
