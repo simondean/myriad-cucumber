@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var Optimist = require('optimist');
+var MyriadCucumber = require('../lib/myriad-cucumber');
+
+function exit(code) {
+  process.stdout.once('drain', function () { process.exit(code); });
+  process.stdout.write('');
+};
+
+var optimist = Optimist
+  .usage('Usage: $0 options -- cucumber_args')
+  .options('h', {
+    alias: 'help',
+    describe: 'Displays this help message'
+  })
+  .options('c', {
+    alias: 'config',
+    default: './myriad-cucumber.js',
+    describe: 'Path to the config file (default ./myriad-cucumber.js)'
+  });
+var argv = optimist.argv;
+
+if (argv.help) {
+  optimist.showHelp();
+  exit(0);
+}
+else {
+  MyriadCucumber(argv).run(function(err) {
+    if (err) {
+      console.error(err);
+      exit(1);
+    }
+    else {
+      exit(0);
+    }
+  })
+}
