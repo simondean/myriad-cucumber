@@ -28,10 +28,10 @@
   },
   "dependencies": {
     "myriad": "~0.1.0",
-    "cucumber": "~0.3.0",
     "optimist": "~0.4.0",
     "async": "~0.2.7",
-    "glob": "~3.2.1"
+    "glob": "~3.2.1",
+    "debug": "~0.7.2"
   },
   "devDependencies": {},
   "bin": {

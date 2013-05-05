@@ -1,0 +1,22 @@
+{
+  "name": "myriad-cucumber-example",
+  "description": "Exmaple test codebase that uses myriad-cucumber",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Simon Dean <simon@simondean.org> (http://www.simondean.org)",
+  "contributors": [],
+  "engines": {
+    "node": ">=0.6"
+  },
+  "dependencies": {
+    "cucumber": "~0.3.0",
+    "async": "~0.2.8"
+  },
+  "devDependencies": {},
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/simondean/myriad-cucumber/LICENSE"
+    }
+  ]
+}

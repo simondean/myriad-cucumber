@@ -1,14 +1,14 @@
 module.exports = {
-  package: '..',
+  package: '.',
   features: ['features'],
   profiles: {
     blue: {
-      bin: 'node',
-      args: ['../node_modules/.bin/cucumber-js', '-format', 'json', '-t', '@blue']
+      bin: 'node_modules/.bin/cucumber-js',
+      args: ['-format', 'json', '-t', '@blue']
     },
     red: {
-      bin: 'node',
-      args: ['../node_modules/.bin/cucumber-js', '-format', 'json', '-t', '@red']
+      bin: 'node_modules/.bin/cucumber-js',
+      args: ['-format', 'json', '-t', '@red']
     }
   }
 };
