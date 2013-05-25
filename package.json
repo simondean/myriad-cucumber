@@ -1,6 +1,6 @@
 {
   "name": "myriad-cucumber",
-  "description": "myriad task that executes tests through cucumber-js",
+  "description": "Uses myriad to execute cucumber tests across multiple processes or machines",
   "keywords": [
     "cucumber",
     "cucumber-js",
@@ -28,10 +28,12 @@
   },
   "dependencies": {
     "myriad": "~0.1.0",
+    "myriad-server": "~0.1.0",
     "optimist": "~0.4.0",
     "async": "~0.2.7",
     "glob": "~3.2.1",
-    "debug": "~0.7.2"
+    "debug": "~0.7.2",
+    "freeport": "~1.0.0"
   },
   "devDependencies": {},
   "bin": {

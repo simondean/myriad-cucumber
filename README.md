@@ -77,9 +77,12 @@ doesn't support the HTML or pretty formatters.
 
 ### Run
 
-myriad-cucumber is executed like this:
+myriad-cucumber is executed by running the following commands in two separate terminals:
 
 ``` shell
 $ node_modules/.bin/myriad-server
-$ node_modules/.bin/myriad-cucumber --workers 4 --myriad-server http://localhost:7777 --local-package
+```
+
+``` shell
+$ node_modules/.bin/myriad-cucumber --workers 4 --myriad-server http://localhost:7777
 ```

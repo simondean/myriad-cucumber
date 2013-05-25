@@ -4,7 +4,7 @@
 
 var Optimist = require('optimist');
 var Debug = require('debug')('myriad-cucumber')
-var MyriadCucumber = require('../lib/myriad-cucumber');
+var MyriadCucumber = require('../lib/myriad_cucumber');
 
 function exit(code) {
   if (process.stdout.write("")) {
@@ -30,7 +30,6 @@ var optimist = Optimist
   })
   .options('s', {
     alias: 'myriad-server',
-    default: 'http://localhost:7777',
     describe: 'URL of the myriad-server'
   })
   .options('w', {
@@ -41,6 +40,7 @@ var optimist = Optimist
   .options('l', {
     alias: 'local-package',
     boolean: true,
+    default: false,
     describe: 'For use when running myriad-server locally.  If true, use locally installed package instead of sending a tarball of the package to myriad-server'
   });
 var argv = optimist.argv;
@@ -50,7 +50,14 @@ if (argv.help) {
   exit(0);
 }
 else {
-  MyriadCucumber(argv).run(function(err, report) {
+  var options = {
+    myriadServerUrl: argv['myriad-server'],
+    configFile: argv['config'],
+    localPackage: argv['local-package'],
+    workers: argv.workers
+  };
+
+  MyriadCucumber(options).run(function(err, report) {
     if (err) {
       Debug('Exiting');
       console.error(err);
