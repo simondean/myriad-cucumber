@@ -7,6 +7,8 @@ var Debug = require('debug')('myriad-cucumber')
 var MyriadCucumber = require('../lib/myriad_cucumber');
 
 function exit(code) {
+  Debug("Exiting with code " + code);
+
   if (process.stdout.write("")) {
     process.exit(code);
   }
