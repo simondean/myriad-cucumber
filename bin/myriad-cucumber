@@ -32,7 +32,7 @@ var optimist = Optimist
   })
   .options('s', {
     alias: 'myriad-server',
-    describe: 'URL of the myriad-server'
+    describe: 'URL of the myriad-server.  If not specified, then myriad-cucumber will launch an embedded instance of myriad-server'
   })
   .options('w', {
     alias: 'workers',
@@ -42,8 +42,8 @@ var optimist = Optimist
   .options('l', {
     alias: 'local-package',
     boolean: true,
-    default: false,
-    describe: 'For use when running myriad-server locally.  If true, use locally installed package instead of sending a tarball of the package to myriad-server'
+    default: true,
+    describe: 'Only has an effect when no myriad-server URL is specified and myriad-server runs embedded within myriad-cucumber.  If true, use locally installed package instead of sending a tarball of the package to myriad-server'
   });
 var argv = optimist.argv;
 
