@@ -30,6 +30,10 @@ var optimist = Optimist
     default: './myriad-cucumber.js',
     describe: 'Path to the config file'
   })
+  .options('o', {
+    alias: 'out',
+    describe: 'File to save the cucumber output to.  If not specified, output will go to stdout'
+  })
   .options('s', {
     alias: 'myriad-server',
     describe: 'URL of the myriad-server.  If not specified, then myriad-cucumber will launch an embedded instance of myriad-server'
@@ -55,6 +59,7 @@ else {
   var options = {
     myriadServerUrl: argv['myriad-server'],
     configFile: argv['config'],
+    out: argv.out,
     localPackage: argv['local-package'],
     workers: argv.workers
   };
@@ -66,7 +71,6 @@ else {
       exit(1);
     }
     else {
-      console.log(JSON.stringify(report));
       exit(0);
     }
   });
