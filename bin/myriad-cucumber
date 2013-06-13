@@ -9,14 +9,11 @@ var MyriadCucumber = require('../lib/myriad_cucumber');
 function exit(code) {
   Debug("Exiting with code " + code);
 
-  if (process.stdout.write("")) {
+  // See https://github.com/joyent/node/issues/3737 for more information
+  // on why the process exit event is used
+  process.on('exit', function() {
     process.exit(code);
-  }
-  else {
-    process.stdout.on('drain', function() {
-      process.exit(code);
-    });
-  }
+  });
 };
 
 var optimist = Optimist
