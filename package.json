@@ -27,8 +27,8 @@
     "node": ">=0.6"
   },
   "dependencies": {
-    "myriad": "~0.1.0",
-    "myriad-server": "~0.1.0",
+    "myriad": "~0.2.1",
+    "myriad-server": "~0.2.1",
     "optimist": "~0.4.0",
     "async": "~0.2.7",
     "glob": "~3.2.1",
