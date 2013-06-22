@@ -27,13 +27,14 @@
     "node": ">=0.6"
   },
   "dependencies": {
-    "myriad": "~0.2.1",
-    "myriad-server": "~0.2.1",
+    "myriad": "~0.2.2",
+    "myriad-server": "~0.2.2",
     "optimist": "~0.4.0",
     "async": "~0.2.7",
     "glob": "~3.2.1",
     "debug": "~0.7.2",
-    "freeport": "~1.0.0"
+    "freeport": "~1.0.0",
+    "js-yaml": "~2.1.0"
   },
   "devDependencies": {},
   "bin": {
