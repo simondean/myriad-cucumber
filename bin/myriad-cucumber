@@ -61,6 +61,8 @@ else {
     workers: argv.workers
   };
 
+  Debug('Options ' + JSON.stringify(options));
+
   MyriadCucumber(options).run(function(err, report) {
     if (err) {
       Debug('Exiting');
