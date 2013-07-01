@@ -35,12 +35,11 @@ $ npm install --dev
 
 ### Config
 
-You need to add a myriad-cucumber.js confg file to the your test codebase:
+You need to add a MyriadCucumberfile.js confg file to the your test codebase:
 
 ``` javascript
 module.exports = {
   package: '.',
-  features: ['features'],
   profiles: {
     default: {
       bin: 'node_modules/.bin/cucumber-js',

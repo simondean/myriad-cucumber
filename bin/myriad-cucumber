@@ -17,14 +17,14 @@ function exit(code) {
 };
 
 var optimist = Optimist
-  .usage('Usage: $0 options')
+  .usage('Usage: $0 options [FILE|DIR]+')
   .options('h', {
     alias: 'help',
     describe: 'Displays this help message'
   })
   .options('c', {
     alias: 'config',
-    default: './myriad-cucumber.js',
+    default: './MyriadCucumberfile.js',
     describe: 'Path to the config file'
   })
   .options('o', {
@@ -58,7 +58,8 @@ else {
     configFile: argv['config'],
     out: argv.out,
     localPackage: argv['local-package'],
-    workers: argv.workers
+    workers: argv.workers,
+    features: argv._
   };
 
   Debug('Options ' + JSON.stringify(options));
