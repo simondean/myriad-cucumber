@@ -57,7 +57,6 @@ and mobile browser.
 ``` javascript
 module.exports = {
   package: '.',
-  features: ['features'],
   profiles: {
     desktop: {
       bin: 'node_modules/.bin/cucumber-js',
@@ -85,3 +84,8 @@ $ node_modules/.bin/myriad-server
 ``` shell
 $ node_modules/.bin/myriad-cucumber --workers 4 --myriad-server http://localhost:7777
 ```
+
+### Example
+
+See https://github.com/simondean/myriad-cucumber-js-example for an example
+test codebase that uses myriad-cucumber and cucumber-js.
