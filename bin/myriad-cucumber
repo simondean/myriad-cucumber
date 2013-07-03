@@ -45,6 +45,12 @@ var optimist = Optimist
     boolean: true,
     default: true,
     describe: 'Only has an effect when no myriad-server URL is specified and myriad-server runs embedded within myriad-cucumber.  If true, use locally installed package instead of sending a tarball of the package to myriad-server'
+  })
+  .options('d', {
+    alias: 'dry-run',
+    boolean: true,
+    default: false,
+    describe: 'Enables cucumber\'s dry run mode'
   });
 var argv = optimist.argv;
 
@@ -59,6 +65,7 @@ else {
     out: argv.out,
     localPackage: argv['local-package'],
     workers: argv.workers,
+    dryRun: argv['dry-run'],
     features: argv._
   };
 
