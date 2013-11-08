@@ -51,6 +51,12 @@ var optimist = Optimist
     boolean: true,
     default: false,
     describe: 'Enables cucumber\'s dry run mode'
+  })
+  .options('debug', {
+    describe: 'Starts cucumber workers in debug mode.  Pass a number to set the port the first worker should listen on.  Subsequent workers will increment the port number.  Default debug port is the node.js standard of 5858'
+  })
+  .options('debug-brk', {
+    describe: 'Starts cucumber workers in debug mode and breaks on the first line.  Accepts an optional port number like --debug'
   });
 var argv = optimist.argv;
 
@@ -66,6 +72,8 @@ else {
     localPackage: argv['local-package'],
     workers: argv.workers,
     dryRun: argv['dry-run'],
+    debug: argv.debug,
+    debugBrk: argv['debug-brk'],
     features: argv._
   };
 
